@@ -57,7 +57,7 @@ end)
 RegisterCommand('+setmoney', function(source, args)
     if not args[1] then
         TriggerClientEvent('chat:addMessage', source, {
-            args = { '^1^*[Error]^7^r You must provide an amount!' }
+            args = { '^1^*[Error]^7^r You must provide an amount' }
         })
         return
     end
@@ -65,7 +65,7 @@ RegisterCommand('+setmoney', function(source, args)
     local money = tonumber(args[1])
     if not money or money < 0 then
         TriggerClientEvent('chat:addMessage', source, {
-            args = { '^1^*[Error]^7^r Invalid amount!' }
+            args = { '^1^*[Error]^7^r Invalid amount' }
         })
         return
     end
@@ -97,7 +97,7 @@ RegisterNetEvent('cc_money:payPlayer', function(targetPlayerId, amount)
         payerMoney = tonumber(payerMoneyString)
         if not payerMoney or payerMoney < amount then
             TriggerClientEvent('chat:addMessage', payerId, {
-                args = {'^1^*[Error]^7^r Insufficient funds!'}
+                args = {'^1^*[Error]^7^r Insufficient funds'}
             })
             return
         end
